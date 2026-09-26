@@ -37,9 +37,8 @@ VERSION = "0.1.0"
 # 竖屏横屏都列出来：同一块屏转 90 度是两个合法尺寸，但属于同一个 display type。
 # 表里没有的尺寸一律拒掉 —— 传上去 Apple 也会退，不如在本地就说清楚。
 SIZES = {
-    (1320, 2868): "APP_IPHONE_69",          # iPhone 16 Pro Max 一档，6.9"
-    (2868, 1320): "APP_IPHONE_69",
-    (1290, 2796): "APP_IPHONE_67",          # 6.7"
+    # API 的 screenshotDisplayType 枚举里没有 6.9" 那一档，iPhone 最大就到 6.7"。
+    (1290, 2796): "APP_IPHONE_67",
     (2796, 1290): "APP_IPHONE_67",
     (1284, 2778): "APP_IPHONE_67",
     (2778, 1284): "APP_IPHONE_67",
